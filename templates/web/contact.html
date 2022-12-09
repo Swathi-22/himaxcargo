@@ -20,7 +20,7 @@
                                         <li class="dots2"></li>
                                     </ol>
                                 </nav>
-                                <h2>support</h2>
+                                <h2>Contact Us</h2>
                             </div>
                         </div>
                     </div>
@@ -29,7 +29,7 @@
             <!-- breadcrumb-area-end -->
 
             <!-- support-area -->
-            <div class="support-area support-bg pt-110 pb-120">
+            <div class="support-area support-bg pt-50 pb-50">
                 <div class="container">
                     <div class="row justify-content-center">
                         <div class="col-xl-7 col-lg-10">
@@ -69,13 +69,13 @@
             <!-- support-area-end -->
 
             <!-- contact-area -->
-            <section class="contact-area primary-bg pt-70 pb-15">
+            <section class="contact-area primary-bg pt-50 pb-50">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-3 col-sm-6">
-                            <div class="single-contact-box mb-50">
+                            <div class="single-contact-box">
                                 <div class="contact-icon mb-30">
-                                    <img src="img/icon/contact_box_icon01.png" alt="img">
+                                    <img src="{% static 'web/img/icon/contact_box_icon01.png' %}" alt="img">
                                 </div>
                                 <div class="contact-content">
                                     <h5>Find Location</h5>
@@ -86,7 +86,7 @@
                         <div class="col-lg-3 col-sm-6">
                             <div class="single-contact-box mb-50">
                                 <div class="contact-icon mb-30">
-                                    <img src="img/icon/contact_box_icon02.png" alt="img">
+                                    <img src="{% static 'web/img/icon/contact_box_icon02.png' %}" alt="img">
                                 </div>
                                 <div class="contact-content">
                                     <h5>Phone Number</h5>
@@ -98,7 +98,7 @@
                         <div class="col-lg-3 col-sm-6">
                             <div class="single-contact-box mb-50">
                                 <div class="contact-icon mb-30">
-                                    <img src="img/icon/contact_box_icon03.png" alt="img">
+                                    <img src="{% static 'web/img/icon/contact_box_icon03.png' %}" alt="img">
                                 </div>
                                 <div class="contact-content">
                                     <h5>email informing</h5>
@@ -110,7 +110,7 @@
                         <div class="col-lg-3 col-sm-6">
                             <div class="single-contact-box mb-50">
                                 <div class="contact-icon mb-30">
-                                    <img src="img/icon/contact_box_icon04.png" alt="img">
+                                    <img src="{% static 'web/img/icon/contact_box_icon04.png' %}" alt="img">
                                 </div>
                                 <div class="contact-content">
                                     <h5>email informing</h5>
@@ -124,7 +124,9 @@
             <!-- contact-area-end -->
 
             <!-- contact-map -->
-            <div id="contact-page-map"></div>
+            <div class="pt-50 pb-50">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31316.26084157175!2d75.94873877039186!3d11.148145892466898!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba64ee2471144f5%3A0x8692de4117c315d!2sKondotty%2C%20Kerala%20673638!5e0!3m2!1sen!2sin!4v1670578131448!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
             <!-- contact-map-end -->
 
         </main>
@@ -156,7 +158,7 @@
                 var marker = new google.maps.Marker({
                     position: new google.maps.LatLng(40.6700, -73.9400),
                     map: map,
-                    icon: 'img/icon/map_icon.png',
+                    icon: '{% static 'web/img/icon/map_icon.png' %}',
                     title: 'Makplus'
                 });
             }
