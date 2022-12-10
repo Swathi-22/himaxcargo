@@ -1305,7 +1305,7 @@ label {
     z-index: 9;
 }
 .slider-content h2 {
-	font-size: 100px;
+	font-size: 75px;
 	text-transform: uppercase;
 	font-weight: 800;
 	color: #fff;
@@ -2125,7 +2125,7 @@ label {
 	background-position: center;
 	background-size: cover;
 	margin-top: -100px;
-	padding-bottom: 125px;
+	padding-bottom: 60px;
 }
 .single-about-wrap {
 	background: #fff;

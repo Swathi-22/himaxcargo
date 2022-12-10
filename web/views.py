@@ -17,6 +17,11 @@ def services(request):
     return render(request,'web/service.html',context)
 
 
+def gallery(request):
+    context = {"is_gallery":True}
+    return render(request,'web/gallery.html',context)
+
+
 def updates(request):
     context = {"is_updates":True}
     return render(request, 'web/blog.html',context)

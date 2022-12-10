@@ -75,6 +75,7 @@
                                             <li><a href="pricing.html">Pricing Plan</a></li>
                                         </ul> -->
                                     </li>
+                                    <li class="{% if is_gallery %} active {% endif %}"><a href="{% url 'web:gallery' %}">Gallery</a></li>
                                     <li class="{% if is_updates %} active {% endif %}"><a href="{% url 'web:updates' %}">Updates</a>
                                         <!-- <ul class="submenu">
                                             <li><a href="blog.html">Blog</a></li>

@@ -1,0 +1,150 @@
+{% extends 'web/base.html' %}
+{% load static %}
+{% block content %}
+
+
+        <!-- main-area -->
+        <main>
+
+            <!-- breadcrumb-area -->
+            <div class="breadcrumb-area breadcrumb-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="breadcrumb-content">
+                                <nav aria-label="breadcrumb">
+                                    <ol class="breadcrumb">
+                                        <li class="dots"></li>
+                                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                                        <li class="breadcrumb-item active" aria-current="page">Gallery</li>
+                                        <li class="dots2"></li>
+                                    </ol>
+                                </nav>
+                                <h2>Gallery</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- breadcrumb-area-end -->
+
+            <!-- gallery start -->
+           <section>
+                <div class="main-img">
+                    <button class="close">&times;</button>
+                    <button class="next">Next</button>
+                    <button class="prev">Prev</button>
+                    <img src="https://demo.epic-webdesign.com/tf-fable/cafe/images/food0.jpg" alt="">
+                </div>
+                <div class="overlay"></div>
+                <div class="gallery-wrapper">
+                    <div class="img">
+                        <img src="https://demo.epic-webdesign.com/tf-fable/cafe/images/food2.jpg" alt="">
+                    </div>
+                    <div class="img">
+                        <img src="https://demo.epic-webdesign.com/tf-fable/cafe/images/food3.jpg" alt="">
+                    </div>
+                    <div class="img">
+                        <img src="https://demo.epic-webdesign.com/tf-fable/cafe/images/food10.jpg" alt="">
+                    </div>
+                    <div class="img">
+                        <img src="https://demo.epic-webdesign.com/tf-fable/cafe/images/food5.jpg" alt="">
+                    </div>
+                    <div class="img">
+                        <img src="https://demo.epic-webdesign.com/tf-fable/cafe/images/food6.jpg" alt="">
+                    </div>
+                    <div class="img">
+                        <img src="https://demo.epic-webdesign.com/tf-fable/cafe/images/food8.jpg" alt="">
+                    </div>
+                </div>
+           </section>
+            
+              
+            <!-- gallery end -->
+        </main>
+
+
+<script>
+const mainImg = document.querySelector(".main-img");
+const images = document.querySelectorAll(".gallery-wrapper img");
+const closeBtn = document.querySelector(".close");
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
+
+nextBtn.addEventListener("click", nextImg);
+prevBtn.addEventListener("click", prevImg);
+
+closeBtn.addEventListener("click", (e) => {
+	mainImg.style.display = "none";
+	mainImg.classList.remove("active");
+});
+
+// Creating Animation For Image Transition
+
+const imgStyles = `animation: imgTransition 0.450s  ease-in-out`;
+
+let showImg = document.querySelector(".main-img img");
+
+let imagesArray = [];
+
+let selectedImg;
+
+// Click Next Button Function
+
+function nextImg() {
+	if (selectedImg < 0) return;
+	let number = Number(selectedImg);
+	let higestCount = Number(imagesArray.length - 1);
+	if (number === higestCount) {
+		number = 0;
+	} else {
+		number++;
+	}
+	selectedImg = number;
+	showImg.src = imagesArray[selectedImg];
+	addRemoveAnimation();
+}
+
+// Click Prev Button Function
+
+function prevImg() {
+	if (selectedImg < 0) return;
+	let number = Number(selectedImg);
+	let lowestCount = 0;
+	let higestCount = Number(imagesArray.length - 1);
+	if (number <= lowestCount) {
+		number = higestCount;
+	} else {
+		number--;
+	}
+	selectedImg = number;
+	showImg.src = imagesArray[selectedImg];
+	addRemoveAnimation();
+}
+
+// Initial Click Handler
+
+for (let image of images) {
+	imagesArray.push(image.src);
+	image.addEventListener("click", (e) => {
+		let img = e.target;
+		currentSelectedImg = imagesArray.indexOf(img.src);
+		mainImg.style.display = "block";
+		mainImg.classList.add("active");
+		showImg.src =
+			imagesArray[selectedImg !== undefined ? selectedImg : currentSelectedImg];
+		selectedImg = currentSelectedImg;
+	});
+}
+
+// Function for add and Remove Style Attribute
+
+function addRemoveAnimation() {
+	showImg.setAttribute("style", imgStyles);
+	setTimeout(() => {
+		showImg.setAttribute("style", "");
+	}, 500);
+}
+
+</script>
+{% endblock %}

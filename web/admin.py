@@ -1,6 +1,6 @@
 from django.contrib import admin
 from .models import Banner
-from .models import Service
+from .models import Gallery
 from .models import Update
 from .models import Clients
 
@@ -11,9 +11,9 @@ class BannerAdmin(admin.ModelAdmin):
     list_display = ( 'title',)
 
 
-@admin.register(Service)
-class ServiceAdmin(admin.ModelAdmin):
-    list_display = ( 'title',)
+@admin.register(Gallery)
+class GalleryAdmin(admin.ModelAdmin):
+    list_display = ( 'id','image',)
     
 
 @admin.register(Update)

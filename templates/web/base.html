@@ -1,3 +1,4 @@
+
 {% load static %}
 <!doctype html>
 <html class="no-js" lang="en">
@@ -5,6 +6,9 @@
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Himaxcargo</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
 		<link rel="shortcut icon" type="image/x-icon" href="{% static 'web/img/logo/FAV-HIMAX.png' %}">
         <!-- Place favicon.ico in the root directory -->
 
@@ -21,8 +25,11 @@
         <link rel="stylesheet" href="{% static 'web/css/default.css' %}">
         <link rel="stylesheet" href="{% static 'web/css/style.css' %}">
         <link rel="stylesheet" href="{% static 'web/css/responsive.css' %}">
+        <link rel="stylesheet" href="{% static 'web/css/gallery.css' %}">
+       
     </head>
     <body>
+
 
         <!-- preloader  -->
         <div id="preloader">
@@ -82,19 +89,22 @@
         </div>
         <!-- preloader end -->
 
-        {% include 'web/partials/header.html' %}
+
+
+      {% include 'web/partials/header.html' %}
   
-        {% block content %}
-    
-        {% endblock %}
-    
-        {% include 'web/partials/footer.html' %}
+      {% block content %}
+  
+      {% endblock %}
+   
+      {% include 'web/partials/footer.html' %}
+     
 
 
 
 
 		<!-- JS here -->
-        <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="{% static 'web/js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script data-cfasync="false" src="{% static 'web/js/5c5dd728/cloudflare-static/email-decode.min.js' %}"></script><script src="{% static 'web/js/vendor/jquery-1.12.4.min.js' %}"></script>
         <script src="{% static 'web/js/popper.min.js' %}"></script>
         <script src="{% static 'web/js/bootstrap.min.js' %}"></script>
         <script src="{% static 'web/js/isotope.pkgd.min.js' %}"></script>
@@ -115,3 +125,4 @@
         <script src="{% static 'web/js/main.js' %}"></script>
     </body>
 </html>
+
