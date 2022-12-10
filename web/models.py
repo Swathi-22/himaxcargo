@@ -26,7 +26,7 @@ class Gallery(models.Model):
         verbose_name_plural = "Gallery"
 
     def __str__(self):
-        return str(self.title)
+        return str(self.image)
 
 
 

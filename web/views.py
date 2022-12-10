@@ -1,6 +1,7 @@
 from django.shortcuts import render
+from .models import Gallery
 
-# Create your views here.
+
 
 def index(request):
     context = {"is_index":True}
@@ -18,7 +19,8 @@ def services(request):
 
 
 def gallery(request):
-    context = {"is_gallery":True}
+    gallery=Gallery.objects.all()
+    context = {"is_gallery":True,"gallery":gallery}
     return render(request,'web/gallery.html',context)
 
 
