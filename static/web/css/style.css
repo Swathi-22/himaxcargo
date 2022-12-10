@@ -4773,14 +4773,14 @@ blockquote.classic-blockquote-post::after {
 }
 
 .ctn-preloader .animation-preloader .txt-loading .letters-loading {
-  color: rgba(0, 0, 0, 0.2);
+  color: #f40506;
   position: relative;
 }
 
 .ctn-preloader .animation-preloader .txt-loading .letters-loading:before {
   -webkit-animation: letters-loading 4s infinite;
   animation: letters-loading 4s infinite;
-  color: #000000;
+  color:#086184;
   content: attr(data-text-preloader);
   left: 0;
   opacity: 0;

@@ -1,19 +1,29 @@
 
 from pathlib import Path
+from decouple import config,Csv
+
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
-SECRET_KEY = 'django-insecure-+*3rd0q(#o+r(u5xbw-a0r$udzfpsrdcfvqzuitvac$me=eh@@'
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = config('SECRET_KEY')
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = config('DEBUG', default=True, cast=bool)
 
 
-DEBUG = True
+
 
 ALLOWED_HOSTS = ["*"]
 
 
 
 INSTALLED_APPS = [
+    'versatileimagefield',
+    'tinymce',
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -22,7 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'web',
-    'versatileimagefield',
+    
 ]
 
 MIDDLEWARE = [
@@ -54,6 +64,20 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'himaxcargo.wsgi.application'
+
+
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': config('DB_ENGINE'),
+#         'NAME': config('DB_NAME'),
+#         'USER': config('DB_USER'),
+#         'PASSWORD': config('DB_PASSWORD'),
+#         'HOST': config('DB_HOST'),
+#         'PORT': '',
+#     }
+# }
+
 
 
 DATABASES = {
