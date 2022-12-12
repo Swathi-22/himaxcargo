@@ -9,18 +9,19 @@
             <!-- slider-area -->
             <section class="slider-area">
                 <div class="slider-active">
-                    <div class="single-slider slider-bg d-flex align-items-center">
+                   {% for obj in banner %}
+                    <div class="single-slider slider-bg d-flex align-items-center" style="background-image: url({{obj.image.url}});">
                         <div class="slider-overlay-bg"></div>
                         <div class="slider-bg-shape"></div>
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-xl-10 col-lg-11">
                                     <div class="slider-content text-center">
-                                        <h2 data-animation="fadeInUpS" data-delay=".3s">Delivery Express</h2>
-                                        <p data-animation="fadeInUpS" data-delay=".6s">Explore ways to become more efficient, see printing offers and solutions
-                                            insights and inspiration for your small business.</p>
+                                        <h2 data-animation="fadeInUpS" data-delay=".3s">{{obj.title}}</h2>
+                                        <!-- <p data-animation="fadeInUpS" data-delay=".6s">Explore ways to become more efficient, see printing offers and solutions
+                                            insights and inspiration for your small business.</p> -->
                                         <div class="slider-form" data-animation="fadeInUpS" data-delay=".9s">
-                                            <form action="#">
+                                            <form action="{%  url 'web:tracking'  %}" method="GET">
                                                 <input type="text" placeholder="Tracking id">
                                                 <button class="btn">Tracking</button>
                                             </form>
@@ -30,6 +31,9 @@
                             </div>
                         </div>
                     </div>
+                    {%  endfor %}
+
+                    {% comment %}
                     <div class="single-slider slider-bg slider-video-overlay d-flex align-items-center youtube-bg" data-property="{videoURL:'enKKcVrPGs0',}">
                         <div class="slider-overlay-bg"></div>
                         <div class="slider-bg-shape"></div>
@@ -51,6 +55,7 @@
                             </div>
                         </div>
                     </div>
+                    {% endcomment %}
                 </div>
             </section>
             <!-- slider-area-end -->
@@ -507,6 +512,48 @@
             </section>
             <!-- gallery-area-end -->
 
+            <!-- testimonial-area -->
+            <section class="testimonial text-center">
+                <div class="container">
+        
+                    <div class="heading white-heading">
+                        Testimonial
+                    </div>
+                    <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
+                     
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <div class="testimonial4_slide">
+                                    <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                    <h4>Client 1</h4>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial4_slide">
+                                    <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" /><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                    <h4>Client 2</h4>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="testimonial4_slide">
+                                    <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                    <h4>Client 3</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#testimonial4" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- testimonial-area-end -->
+
             <!-- fact-area -->
             <section class="fact-area position-relative pt-50">
                 <div class="fact-bg"></div>
@@ -684,11 +731,16 @@
             <div class="brand-area pt-50 pb-50">
                 <div class="container">
                     <div class="row brand-active">
+
+                        {% for obj in clients %}
                         <div class="col-12">
                             <div class="signle-brand">
-                                <img src="{% static 'web/img/brand/brnad_logo01.png' %}" alt="img">
+                                <img src="{{obj.image.crop.95x95}}" alt="img">
                             </div>
                         </div>
+                        {% endfor %}
+
+                        {% comment %}
                         <div class="col-12">
                             <div class="signle-brand">
                                 <img src="{% static 'web/img/brand/brnad_logo02.png' %}" alt="img">
@@ -714,6 +766,7 @@
                                 <img src="{% static 'web/img/brand/brnad_logo03.png' %}" alt="img">
                             </div>
                         </div>
+                        {% endcomment %}
                     </div>
                 </div>
             </div>
@@ -752,7 +805,27 @@
         <!-- main-area-end -->
 
 
+     
+
 {% endblock %}
 
 
+
+{% block javascript %}
+
+<script>
+  var url = new URL(window.location.href);
+  var code = url.searchParams.get("code");
+  console.log(code);
+  elm = document.getElementById("section-tracking-result-message");
+  if (code) {
+    elm.classList.remove("d-none");
+    elm.classList.add("d-block");
+    console.log(code);
+  } else {
+    elm.classList.remove("d-block");
+    elm.classList.add("d-none");
+  }
+</script>
+{% endblock %}
 
