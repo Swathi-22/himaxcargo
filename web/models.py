@@ -101,3 +101,101 @@ class OrderUpdate(models.Model):
 
     def str(self):
         return str(self.order)
+
+
+
+class Testimonial(models.Model):
+    name=models.CharField(max_length=225)
+    designation=models.CharField(max_length=225)
+    image=VersatileImageField('Image',upload_to='testimonials/',ppoi_field='ppoi' )
+    ppoi = PPOIField('Image PPOI')
+    decription=models.CharField(max_length=500)
+
+    def __str__(self):
+        return str(self.name)
+
+
+
+class CargoRequest(models.Model):
+    SERVICE_CHOICES = (
+        ("Air cargo", "Air cargo"),
+        ("Sea cargo", "Sea cargo"),
+        ("Port to port service", "Port to port service"),
+        ("Moving service", "Moving service"),
+        ("Express delivery", "Express delivery"),
+    )
+    FROM_COUNTRY_CHOICES = (
+        ("United States","United States"),
+        ("United Kingdom","United Kingdom"),
+        ("Afghanistan","Afghanistan"),
+        ("Albania","Albania"),
+        ("Algeria","Algeria"),
+        ("American Samoa","American Samoa"),
+        ("Andorra","Andorra"),
+        ("Angola","Angola"),
+        ("Anguilla","Anguilla"),
+        ("Antarctica","Antarctica"),
+        ("Antigua and Barbuda","Antigua and Barbuda"),
+        ("Argentina","Argentina"),
+        ("Armenia","Armenia"),
+        ("Aruba","Aruba"),
+        ("Australia","Australia"),
+        ("Austria","Austria"),
+        ("Azerbaijan","Azerbaijan"),
+        ("Bahamas","Bahamas"),
+        ("Bahrain","Bahrain"),
+        ("Bangladesh","Bangladesh"),
+        ("Barbados","Barbados"),
+        ("Belarus","Belarus"),
+        ("Belgium","Belgium"),
+        ("Belize","Belize"),
+        ("Benin","Benin"),
+        ("Bermuda","Bermuda"),
+        ("Bhutan","Bhutan"),
+        ("Bolivia","Bolivia"),
+        )
+    TO_COUNTRY_CHOICES = (
+        ("Iceland","Iceland"),
+        ("India","India"),
+        ("Indonesia","Indonesia"),
+        ("Iran, Islamic Republic of","Iran, Islamic Republic of"),
+        ("Iraq","Iraq"),
+        ("Ireland","Ireland"),
+        ("Israel","Israel"),
+        ("Italy","Italy"),
+        ("Jamaica","Jamaica"),
+        ("Japan","Japan"),
+        ("Jordan","Jordan"),
+        ("Kazakhstan","Kazakhstan"),
+        ("Kenya","Kenya"),
+        ("Kiribati","Kiribati"),
+        ("Korea, Republic of","Korea, Republic of"),
+        ("Kuwait","Kuwait"),
+        ("Kyrgyzstan","Kyrgyzstan"),
+        ("Latvia","Latvia"),
+        ("Lebanon","Lebanon"),
+        ("Lesotho","Lesotho"),
+        ("Liberia","Liberia"),
+    )
+    WEIGHT_CHOICES = (
+        ("100Kg","100Kg"),
+        ("200Kg","200Kg"),
+        ("300Kg","300Kg"),
+        ("400Kg","400Kg"),
+        ("500Kg","500Kg"),
+        ("600Kg","600Kg"),
+        ("700Kg","700Kg"),
+    )
+    services = models.CharField(max_length=100,choices=SERVICE_CHOICES)
+    length = models.CharField(max_length=25)
+    width = models.CharField(max_length=25)
+    from_country = models.CharField(max_length=100,choices=FROM_COUNTRY_CHOICES)
+    to_country = models.CharField(max_length=100,choices=TO_COUNTRY_CHOICES)
+    weight = models.CharField(max_length=100,choices=WEIGHT_CHOICES)
+    phone = models.CharField(max_length=50)
+
+    class Meta:
+        verbose_name_plural = "Cargo Request"
+
+    def __str__(self):
+        return str(self.services)

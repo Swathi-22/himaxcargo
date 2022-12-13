@@ -269,31 +269,23 @@
                                     <h2>Our Top Reviews</h2>
                                 </div>
                                 <div class="testimonial-active">
+                                    {% for obj in testimonial %}
                                     <div class="single-testimonial">
-                                        <div class="testimonial-cat mb-30">
-                                            <h5>Shipping Cargo</h5>
-                                            <div class="testimonial-rating">
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                                <i class="fas fa-star"></i>
-                                            </div>
-                                        </div>
                                         <div class="testimonial-content mb-45">
-                                            <p>“ Express delivery is an innovative service is effective logistics solution for the delivery of small cargo. This
-                                            service is useful companied various effective logistics scala ”</p>
+                                            <p>{{obj.decription}}</p>
                                         </div>
                                         <div class="testimonial-avatar">
                                             <div class="testi-avatar-img">
-                                                <img src="{% static 'web/img/images/testi_avatar01.png' %}" alt="img">
+                                                <img src="{{obj.image.crop.74x74}}" alt="img">
                                             </div>
                                             <div class="testi-avatar-info">
-                                                <h6>Tonoy Alexander</h6>
-                                                <span>Founder Cargo</span>
+                                                <h6>{{obj.name}}</h6>
+                                                <span>{{obj.designation}}</span>
                                             </div>
                                         </div>
                                     </div>
+                                    {% endfor %}
+                                    {% comment %}
                                     <div class="single-testimonial">
                                         <div class="testimonial-cat mb-30">
                                             <h5>Air Freight</h5>
@@ -319,6 +311,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    {% endcomment %}
                                 </div>
                             </div>
                         </div>
@@ -329,17 +322,18 @@
                                     <h2>Cargo Request Quote</h2>
                                 </div>
                                 <div class="cta-from">
-                                    <form action="#">
+                                    <form id="form" method="POST" class="ajax reload">
+                                        {% csrf_token %}
                                         <div class="cta-form-col d-flex justify-content-between">
                                             <select class="custom-select">
                                                 <option selected="">Select Service</option>
-                                                <option>Air Freight</option>
+                                                <option></option>
                                                 <option>Shipping Cargo</option>
                                                 <option>Rail Cargo</option>
                                                 <option>Warehousing</option>
                                             </select>
                                             <input type="text" placeholder="Length cm">
-                                            <input type="text" placeholder="Hight cm">
+                                            <input type="text" placeholder="Width cm">
                                         </div>
                                         <div class="cta-form-col d-flex justify-content-between">
                                             <select class="custom-select">
@@ -409,36 +403,10 @@
                                                 <option>600Kg</option>
                                                 <option>700Kg</option>
                                             </select>
-                                            <input class="cta-email" type="email" placeholder="Email ID">
+                                            <input class="cta-email" type="text" placeholder="Phone">
                                         </div>
-                                        <h4 class="extra-services"><i class="fas fa-binoculars"></i>Extra Service</h4>
-                                        <ul>
-                                            <li>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                                    <label class="custom-control-label" for="customCheck1">Air Freight</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                                    <label class="custom-control-label" for="customCheck2">Shipping Cargo</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                                    <label class="custom-control-label" for="customCheck3">Rail Cargo</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div class="custom-control custom-checkbox">
-                                                    <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                                    <label class="custom-control-label" for="customCheck4">Warehousing</label>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                        <button class="btn">comparison</button>
+                                        
+                                        <button class="btn" type="submit" >Submit</button>
                                     </form>
                                 </div>
                             </div>
@@ -511,48 +479,6 @@
                 </div>
             </section>
             <!-- gallery-area-end -->
-
-            <!-- testimonial-area -->
-            <section class="testimonial text-center">
-                <div class="container">
-        
-                    <div class="heading white-heading">
-                        Testimonial
-                    </div>
-                    <div id="testimonial4" class="carousel slide testimonial4_indicators testimonial4_control_button thumb_scroll_x swipe_x" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
-                     
-                        <div class="carousel-inner" role="listbox">
-                            <div class="carousel-item active">
-                                <div class="testimonial4_slide">
-                                    <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                                    <h4>Client 1</h4>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="testimonial4_slide">
-                                    <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" /><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                                    <h4>Client 2</h4>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="testimonial4_slide">
-                                    <img src="https://i.ibb.co/8x9xK4H/team.jpg" class="img-circle img-responsive" />
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                                    <h4>Client 3</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <a class="carousel-control-prev" href="#testimonial4" data-slide="prev">
-                            <span class="carousel-control-prev-icon"></span>
-                        </a>
-                        <a class="carousel-control-next" href="#testimonial4" data-slide="next">
-                            <span class="carousel-control-next-icon"></span>
-                        </a>
-                    </div>
-                </div>
-            </section>
-            <!-- testimonial-area-end -->
 
             <!-- fact-area -->
             <section class="fact-area position-relative pt-50">

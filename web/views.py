@@ -6,13 +6,36 @@ from .models import Clients
 from .models import Icon
 from .models import Order
 from .models import OrderUpdate
+from .models import Testimonial
+from .forms import CargoRequestForm
+from django.http import HttpResponse
 
 
 
 def index(request):
     banner = Banner.objects.all()
     clients = Clients.objects.all()
-    context = {"is_index":True,"banner":banner,"clients":clients}
+    testimonial = Testimonial.objects.all()
+    forms = CargoRequestForm(request.POST or None)
+    if request.method == 'POST':
+        if forms.is_valid():
+            data = forms.save(commit=False)
+            data.referral = "web"
+            data.save()
+            response_data = {
+                "status": "true",
+                "title": "Successfully Submitted",
+                "message": "Message successfully submitted"
+            }
+        else:
+            response_data = {
+                "status": "false",
+                "title": "Form validation error",
+                "message": repr(forms.errors)
+            }
+        return HttpResponse(json.dumps(response_data), content_type='application/javascript')
+    else:
+        context = {"is_index":True,"banner":banner,"clients":clients,"testimonial":testimonial,"forms":forms}
     return render(request,'web/index.html',context)
 
 
