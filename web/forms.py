@@ -5,6 +5,8 @@ from django.forms.widgets import Select
 from django.forms.widgets import Textarea
 from django.forms.widgets import TextInput
 from .models import CargoRequest
+from .models import Contact
+
 
 
 class CargoRequestForm(forms.ModelForm):
@@ -12,11 +14,25 @@ class CargoRequestForm(forms.ModelForm):
         model = CargoRequest
         fields = "__all__"
         widgets = {
-            "services": Select(attrs={"class": "custom-select",}),
-            "length": TextInput(attrs={"placeholder":"Length cm"}),
-            "width": Select(attrs={"placeholder":"Width cm"}),
-            "from_country": Select(attrs={"class": "custom-select"}),
-            "to_country": TextInput(attrs={"class": "custom-select"}),
-            "weight": TextInput(attrs={"class": "custom-select"}),
-            "phone": TextInput(attrs={"class": "cta-email"}),
+            "services": Select(attrs={"class": "form-control form-color"}),
+            "length": TextInput(attrs={"class": "form-control form-color"}),
+            "width": TextInput(attrs={"class": "form-control form-color"}),
+            "from_country": Select(attrs={"class": "form-control form-color"}),
+            "to_country": Select(attrs={"class": "form-control form-color"}),
+            "weight": Select(attrs={"class": "form-control form-color"}),
+            "phone": TextInput(attrs={"class": "form-control form-color"}),
         }
+
+
+
+class ContactForm(forms.ModelForm):
+    class Meta:
+        model=Contact
+        fields='__all__'
+        widgets={
+            'name':TextInput(attrs={'placeholder':"Your Name",}),
+            'email':EmailInput(attrs={'placeholder':"Your Email",}),
+            'phone':TextInput(attrs={'placeholder':"Your Phone",}),
+            'subject':TextInput(attrs={'placeholder':"Subject",}),
+            'message':Textarea(attrs={'placeholder':"Message",'rows':"6"}),
+         }

@@ -8,6 +8,9 @@ from .models import Order
 from .models import OrderUpdate
 from .models import Testimonial
 from .models import CargoRequest
+from .models import Contact
+
+
 
 @admin.register(Banner)
 class BannerAdmin(admin.ModelAdmin):
@@ -59,3 +62,8 @@ class TestimonialAdmin(admin.ModelAdmin):
 @admin.register(CargoRequest)
 class CargoRequestAdmin(admin.ModelAdmin):
     list_display = ( 'services','length','width','from_country','to_country','weight','phone',)
+
+
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ( 'name','phone','email',)

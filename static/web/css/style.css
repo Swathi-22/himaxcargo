@@ -5078,3 +5078,12 @@ blockquote.classic-blockquote-post::after {
 	font-weight: 700;
 }
 }
+
+.form-color{
+	background-color: rgba(5, 24, 45, 0.5) !important;
+    border: 1.5px solid #596470;
+	color: #ecebe2 !important;
+}
+.btn-mr{
+	margin-top: 10px;
+}
