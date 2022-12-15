@@ -23,22 +23,22 @@ a.meanmenu-reveal {
 }
 
 .mean-container a.meanmenu-reveal {
-	border: 2px solid #ff4800;
-	color: #ff4800;
-	cursor: pointer;
-	display: block;
-	font-family: Arial,Helvetica,sans-serif;
-	font-size: 1px;
-	font-weight: 700;
-	height: 22px;
-	line-height: 22px;
-	margin-top: -46px;
-	padding: 8px 9px;
-	position: absolute;
-	right: 0;
-	text-decoration: none;
-	top: 0;
-	width: 22px;
+    border: 2px solid #ff4800;
+    color: #ff4800;
+    cursor: pointer;
+    display: block;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 1px;
+    font-weight: 700;
+    height: 20px;
+    line-height: 22px;
+    margin-top: -46px;
+    padding: 6px 6px;
+    position: absolute;
+    right: 0;
+    text-decoration: none;
+    top: 0;
+    width: 22px;
 }
 .mean-container a.meanmenu-reveal span {
 	background: #ff4800 none repeat scroll 0 0;

@@ -2820,7 +2820,7 @@ label {
 	z-index: 1;
 }
 .area-wrap-bg {
-	background-image: url(../img/bg/quote_bg.jpg);
+	background-image: url(../img/images/metafores.jpg);
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -5086,4 +5086,8 @@ blockquote.classic-blockquote-post::after {
 }
 .btn-mr{
 	margin-top: 10px;
+}
+
+.main-logo{
+	width: 50%;
 }
