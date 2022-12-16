@@ -648,7 +648,7 @@ blockquote.blockquote-post::before {
 
 /* small mobile :320px. */
 @media (max-width: 767px) {
-	
+
 .header-container-p {
 	padding-left: 15px;
 	padding-right: 15px;
@@ -671,7 +671,7 @@ blockquote.blockquote-post::before {
 	margin-top: -27px;
 }
 .slider-content h2 {
-	font-size: 50px;
+	font-size: 46px;
 }
 .slider-content p {
 	width: 100%;
@@ -985,13 +985,20 @@ blockquote.blockquote-post::before {
 	text-align: center;
 }
 .breadcrumb-bg {
-	min-height: 560px;
+	min-height: 195px;
 }
 .breadcrumb-content {
-	padding-top: 120px;
+	padding-top: 0px;
+}
+.breadcrumb li {
+    display: inline-block;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #ffffff;
 }
 .breadcrumb {
-	padding: 13px 25px;
+	padding: 8px 8px;
 }
 .breadcrumb::before,
 .breadcrumb::after {
@@ -1002,7 +1009,7 @@ blockquote.blockquote-post::before {
 	display: none;
 }
 .breadcrumb-content h2 {
-	font-size: 36px;
+	font-size: 33px;
 }
 .breadcrumb-content h2::before {
 	display: none;
@@ -1259,6 +1266,10 @@ blockquote::before {
 
 /* Large Mobile :480px. */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+	#section-tracking {
+		background: #1a1e20;
+		margin: 60px 0px !important;
+	}
 .slider-form form {
 	display: flex;
 	justify-content: center;

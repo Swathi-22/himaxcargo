@@ -14,4 +14,10 @@ urlpatterns = [
     path('contact/', views.contact,name='contact'),
     path('order-tracking/',views.tracking,name='tracking'),
     path('order-tracking/<str:slug>/',views.live_tracking, name='live_tracking'),
+    path('air_cargo/',views.air_cargo,name='air_cargo'),
+    path('sea_cargo/',views.sea_cargo,name='sea_cargo'),
+    path('port_to_port/',views.port_to_port,name='port_to_port'),
+    path('moving_cargo/',views.moving_cargo,name='moving_cargo'),
+    path('express_delivery/',views.express_delivery,name='express_delivery'),
+
 ]

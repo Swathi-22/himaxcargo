@@ -117,3 +117,28 @@ def live_tracking(request,slug):
         'order':order
     }
     return render(request,'web/tracking.html',context)
+
+
+def air_cargo(request):
+    context = {}
+    return render(request,'web/air-gargo.html',context)
+
+
+def sea_cargo(request):
+    context = {}
+    return render(request,'web/sea-cargo.html',context)
+
+
+def port_to_port(request):
+    context = {}
+    return render(request,'web/port-to-port.html',context)
+
+
+def moving_cargo(request):
+    context = {}
+    return render(request,'web/moving-service.html',contex)
+
+
+def express_delivery(request):
+    context = {}
+    return render(request,'web/express-delivery.html')

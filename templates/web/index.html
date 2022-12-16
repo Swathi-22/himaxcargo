@@ -23,7 +23,7 @@
                                             insights and inspiration for your small business.</p> -->
                                 <div class="slider-form" data-animation="fadeInUpS" data-delay=".9s">
                                     <form action="{%  url 'web:tracking'  %}" method="GET">
-                                        <input type="text" placeholder="Tracking id">
+                                        <input type="text" placeholder="Tracking id" class="form-input">
                                         <button class="btn">Tracking</button>
                                     </form>
                                 </div>
@@ -72,43 +72,43 @@
                         <div class="category-list">
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="{% url 'web:air_cargo' %}">
                                         <div class="category-icon">
                                             <i class="flaticon-cruise"></i>
                                         </div>
-                                        <h5>Sea Freight</h5>
+                                        <h5>Air cargo</h5>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="service.html">
+                                    <a href="{% url 'web:sea_cargo' %}">
                                         <div class="category-icon">
                                             <i class="flaticon-air-freight"></i>
                                         </div>
-                                        <h5>Air Freight</h5>
+                                        <h5>Sea cargo</h5>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="{% url 'web:port_to_port' %}">
                                         <div class="category-icon">
                                             <i class="flaticon-delivery-1"></i>
                                         </div>
-                                        <h5>Insurance</h5>
+                                        <h5>Port to port service</h5>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="{% url 'web:moving_cargo' %}">
                                         <div class="category-icon">
                                             <i class="flaticon-warehouse"></i>
                                         </div>
-                                        <h5>Warehousing</h5>
+                                        <h5>Moving service</h5>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="{% url 'web:express_delivery' %}">
                                         <div class="category-icon">
                                             <i class="flaticon-package"></i>
                                         </div>
-                                        <h5>Forwarding</h5>
+                                        <h5>Express delivery</h5>
                                     </a>
                                 </li>
                             </ul>
@@ -386,6 +386,7 @@
     <!-- section-area-end -->
 
     <!-- gallery-area -->
+    {% comment %}
     <section class="gallery-area gallery-bg pt-50 pb-50">
         <div class="container">
             <div class="row justify-content-center">
@@ -447,6 +448,7 @@
             </div>
         </div>
     </section>
+    {% endcomment %}
     <!-- gallery-area-end -->
 
     <!-- fact-area -->

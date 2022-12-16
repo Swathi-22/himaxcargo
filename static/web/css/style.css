@@ -1328,7 +1328,7 @@ label {
 	justify-content: center;
 	align-items: center;
 }
-.slider-form input {
+/* .slider-form input {
 	width: 370px;
 	border: none;
 	background: #fff;
@@ -1337,7 +1337,7 @@ label {
 	font-weight: 600;
 	text-transform: uppercase;
 	color: #473856;
-}
+} */
 .slider-form input::placeholder {
 	text-transform: uppercase;
 	color: #473856;
@@ -2010,7 +2010,7 @@ label {
 	transition: .4s ease-in-out;
 }
 .category-list ul li h5 {
-	font-size: 14px;
+	font-size: 10px;
 	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 0;
@@ -5090,4 +5090,9 @@ blockquote.classic-blockquote-post::after {
 
 .main-logo{
 	width: 50%;
+}
+
+.form-input{
+	padding: 16px 0px;
+    text-align: center;
 }

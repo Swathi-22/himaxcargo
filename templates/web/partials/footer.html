@@ -32,11 +32,11 @@
                         </div>
                         <div class="fw-link">
                             <ul>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> About us</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Delivery Information</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Terms & Conditions</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Privacy Policy</a></li>
-                                <li><a href="#"><i class="fas fa-caret-right"></i> Refund Policy</a></li>
+                                <li><a href="{% url 'web:about' %}"><i class="fas fa-caret-right"></i> About us</a></li>
+                                <li><a href="{% url 'web:services' %}"><i class="fas fa-caret-right"></i> Services </a></li>
+                                <li><a href="{% url 'web:gallery' %}"><i class="fas fa-caret-right"></i> Gallery </a></li>
+                                <li><a href="{% url 'web:updates' %}"><i class="fas fa-caret-right"></i> Updates </a></li>
+                                <li><a href="{% url 'web:contact' %}"><i class="fas fa-caret-right"></i> Contact </a></li>
                             </ul>
                         </div>
                     </div>
@@ -44,13 +44,37 @@
                 <div class="col-xl-4 col-lg-4 col-md-6">
                     <div class="footer-widget mb-50">
                         <div class="fw-title mb-30">
-                            <h5>Support & Downloads</h5>
+                            <h5>Contact</h5>
                         </div>
                         <div class="f-support-content">
-                            <p>Lorem ipsum dolor sit amet, consy eetur adipisc de elit. Quisque act raqum nunc no dolor
-                            </p>
-                            <a href="#" class="f-download-btn"><img src="{% static 'web/img/images/f_download_btn01.png' %}" alt="img"></a>
-                            <a href="#" class="f-download-btn"><img src="{% static 'web/img/images/f_download_btn02.png' %}" alt="img"></a>
+                            <div class="row">
+                                <div class="col-lg-2 col-md-2 col-sm-3 col-3 py-2 text-center">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-10 col-10 py-2">
+                                    <a href="" style="color: #969696;">
+                                        +91 0000000000
+                                    </a>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-3 col-3 py-2 text-center">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-10 col-10 py-2">
+                                    <a href="" style="color: #969696;">
+                                        info@demo.com
+                                    </a>
+                                </div>
+                                <div class="col-lg-2 col-md-2 col-sm-3 col-3 text-center">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="col-lg-10 col-md-10 col-sm-10 col-10">
+                                    <p>
+                                        demo <br>
+                                        demo <br>
+                                        demo
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -60,14 +84,9 @@
     <div class="copyright-wrap">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 col-md-7">
+                <div class="col-lg-12 col-md-12" style="text-align: center;">
                     <div class="copyright-text">
                         <p>Copyright© <span>Himaxcargo </span> | All Rights Reserved</p>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-5">
-                    <div class="f-payment-method text-center text-md-right">
-                        <img src="{% static 'web/img/images/card_img.png' %}" alt="img">
                     </div>
                 </div>
             </div>
