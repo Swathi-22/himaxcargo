@@ -14,7 +14,7 @@ class CargoRequestForm(forms.ModelForm):
         model = CargoRequest
         fields = "__all__"
         widgets = {
-            "services": Select(attrs={"class": "form-control form-color"}),
+            "services": Select(attrs={"class": "form-control form-color",}),
             "length": TextInput(attrs={"class": "form-control form-color"}),
             "width": TextInput(attrs={"class": "form-control form-color"}),
             "from_country": Select(attrs={"class": "form-control form-color"}),

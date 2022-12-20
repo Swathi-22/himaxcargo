@@ -118,6 +118,7 @@ class Testimonial(models.Model):
 
 class CargoRequest(models.Model):
     SERVICE_CHOICES = (
+        ("","--select--"),
         ("Air cargo", "Air cargo"),
         ("Sea cargo", "Sea cargo"),
         ("Port to port service", "Port to port service"),
@@ -125,6 +126,7 @@ class CargoRequest(models.Model):
         ("Express delivery", "Express delivery"),
     )
     FROM_COUNTRY_CHOICES = (
+        ("","--select--"),
         ("United States","United States"),
         ("United Kingdom","United Kingdom"),
         ("Afghanistan","Afghanistan"),
@@ -155,6 +157,7 @@ class CargoRequest(models.Model):
         ("Bolivia","Bolivia"),
         )
     TO_COUNTRY_CHOICES = (
+        ("","--select--"),
         ("Iceland","Iceland"),
         ("India","India"),
         ("Indonesia","Indonesia"),
@@ -178,6 +181,7 @@ class CargoRequest(models.Model):
         ("Liberia","Liberia"),
     )
     WEIGHT_CHOICES = (
+        ("","--select--"),
         ("100Kg","100Kg"),
         ("200Kg","200Kg"),
         ("300Kg","300Kg"),

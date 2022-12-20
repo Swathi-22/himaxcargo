@@ -1,5 +1,8 @@
 /* Large desktop :1800px. */
 @media (min-width: 1500px) and (max-width: 1800px) {
+.center-align{
+	text-align: center;
+}
 .slider-golve-bike {
 	left: 15.6%;
 }
@@ -18,6 +21,9 @@
 
 /* Normal desktop :1200px. */
 @media (min-width: 1200px) and (max-width: 1500px) {
+.center-align{
+	text-align: center;
+}
 .header-container-p {
 	padding-left: 50px;
 	padding-right: 50px;
@@ -70,6 +76,9 @@
 
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
+.center-align{
+	text-align: center;
+}
 .header-container-p {
 	padding-left: 15px;
 	padding-right: 15px;

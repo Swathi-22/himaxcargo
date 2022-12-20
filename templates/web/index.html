@@ -74,7 +74,8 @@
                                 <li>
                                     <a href="{% url 'web:air_cargo' %}">
                                         <div class="category-icon">
-                                            <i class="flaticon-cruise"></i>
+                                            <!-- <i class="flaticon-cruise"></i> -->
+                                            <img src="{% static 'web/img/icon/Air Cargo-01.png' %}" alt="">
                                         </div>
                                         <h5>Air cargo</h5>
                                     </a>
@@ -82,7 +83,8 @@
                                 <li>
                                     <a href="{% url 'web:sea_cargo' %}">
                                         <div class="category-icon">
-                                            <i class="flaticon-air-freight"></i>
+                                            <!-- <i class="flaticon-air-freight"></i> -->
+                                            <img src="{% static 'web/img/icon/Sea Cargo-01.png' %}" alt="">
                                         </div>
                                         <h5>Sea cargo</h5>
                                     </a>
@@ -90,7 +92,8 @@
                                 <li>
                                     <a href="{% url 'web:port_to_port' %}">
                                         <div class="category-icon">
-                                            <i class="flaticon-delivery-1"></i>
+                                            <!-- <i class="flaticon-delivery-1"></i> -->
+                                            <img src="{% static 'web/img/icon/Port to Port-01.png' %}" alt="">
                                         </div>
                                         <h5>Port to port service</h5>
                                     </a>
@@ -98,7 +101,8 @@
                                 <li>
                                     <a href="{% url 'web:moving_cargo' %}">
                                         <div class="category-icon">
-                                            <i class="flaticon-warehouse"></i>
+                                            <!-- <i class="flaticon-warehouse"></i> -->
+                                            <img src="{% static 'web/img/icon/moving service-01.png' %}" alt="">
                                         </div>
                                         <h5>Moving service</h5>
                                     </a>
@@ -106,7 +110,8 @@
                                 <li>
                                     <a href="{% url 'web:express_delivery' %}">
                                         <div class="category-icon">
-                                            <i class="flaticon-package"></i>
+                                            <!-- <i class="flaticon-package"></i> -->
+                                            <img src="{% static 'web/img/icon/express-01.png' %}" alt="">
                                         </div>
                                         <h5>Express delivery</h5>
                                     </a>
@@ -142,7 +147,7 @@
                                         <p>Express delivery is an innovative service is effective logistics solution for
                                             the delivery of small cargo. This service
                                             is useful for companies of various effective logistics scale.</p>
-                                        <a href="#" class="btn">comparison</a>
+                                        <a href="{% url 'web:about' %}" class="btn">More About</a>
                                     </div>
                                 </div>
                             </div>
@@ -203,7 +208,7 @@
                 <div class="col-xl-8 col-lg-10">
                     <div class="section-title text-center mb-60">
                         <h6>Delivery innovative service</h6>
-                        <h2>About Cargo Delivery</h2>
+                        <h2>Our Services</h2>
                         <p>Express delivery is an innovative service is effective logistics solution for the delivery of
                             small cargo. This service
                             is useful for companies of various effective logistics scale.</p>
@@ -215,14 +220,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-services mb-30">
                             <div class="services-thumb">
-                                <a href="#"><img src="{% static 'web/img/images/cargo 1-02.jpg' %}" alt="img"></a>
+                                <a href="#"><img src="{% static 'web/img/images/aircargo.jpeg' %}" alt="img"></a>
                             </div>
                             <div class="services-content">
                                 <div class="services-icon">
                                     <i class="flaticon-shipping-and-delivery"></i>
                                 </div>
                                 <h3><a href="#">More Control, for Free</a></h3>
-                                <span>Delivery Service</span>
+                                <span>Air cargo</span>
                                 <p>Express delivery is an innovativ service is effective logistics solutio for delivery
                                     of small cargo service.</p>
                             </div>
@@ -231,14 +236,14 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-services mb-30">
                             <div class="services-thumb">
-                                <a href="#"><img src="{% static 'web/img/images/cargo 1-01.jpg' %}" alt="img"></a>
+                                <a href="#"><img src="{% static 'web/img/images/seacargo.png' %}" alt="img"></a>
                             </div>
                             <div class="services-content">
                                 <div class="services-icon">
                                     <i class="flaticon-shipping"></i>
                                 </div>
                                 <h3><a href="#">Expand with E-Commerce</a></h3>
-                                <span>Delivery Service</span>
+                                <span>Sea cargo</span>
                                 <p>Express delivery is an innovativ service is effective logistics solutio for delivery
                                     of small cargo service.</p>
                             </div>
@@ -247,14 +252,46 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="single-services mb-30">
                             <div class="services-thumb">
-                                <a href="#"><img src="{% static 'web/img/images/iStock_505647848_Verpackung.jpg' %}" alt="img"></a>
+                                <a href="#"><img src="{% static 'web/img/images/port2port.png' %}" alt="img"></a>
                             </div>
                             <div class="services-content">
                                 <div class="services-icon">
                                     <i class="flaticon-location"></i>
                                 </div>
                                 <h3><a href="#">More Than Anywhere Shipping</a></h3>
-                                <span>Delivery Service</span>
+                                <span>Port to port service</span>
+                                <p>Express delivery is an innovativ service is effective logistics solutio for delivery
+                                    of small cargo service.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-services mb-30">
+                            <div class="services-thumb">
+                                <a href="#"><img src="{% static 'web/img/images/movingservice.png' %}" alt="img"></a>
+                            </div>
+                            <div class="services-content">
+                                <div class="services-icon">
+                                    <i class="flaticon-location"></i>
+                                </div>
+                                <h3><a href="#">More Than Anywhere Shipping</a></h3>
+                                <span>Moving service</span>
+                                <p>Express delivery is an innovativ service is effective logistics solutio for delivery
+                                    of small cargo service.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="single-services mb-30">
+                            <div class="services-thumb">
+                                <a href="#"><img src="{% static 'web/img/images/express-delivery.png' %}" alt="img"></a>
+                            </div>
+                            <div class="services-content">
+                                <div class="services-icon">
+                                    <i class="flaticon-location"></i>
+                                </div>
+                                <h3><a href="#">More Than Anywhere Shipping</a></h3>
+                                <span> Express delivery</span>
                                 <p>Express delivery is an innovativ service is effective logistics solutio for delivery
                                     of small cargo service.</p>
                             </div>
