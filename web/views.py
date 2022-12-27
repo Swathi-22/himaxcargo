@@ -17,6 +17,7 @@ def index(request):
     banner = Banner.objects.all()
     clients = Clients.objects.all()
     testimonial = Testimonial.objects.all()
+    updates=Update.objects.all()[:3]
     forms = CargoRequestForm(request.POST or None)
     if request.method == 'POST':
         if forms.is_valid():
@@ -36,7 +37,7 @@ def index(request):
             }
         return HttpResponse(json.dumps(response_data), content_type='application/javascript')
     else:
-        context = {"is_index":True,"banner":banner,"clients":clients,"testimonial":testimonial,"forms":forms}
+        context = {"is_index":True,"banner":banner,"clients":clients,"testimonial":testimonial,"forms":forms,"updates":updates}
     return render(request,'web/index.html',context)
 
 
