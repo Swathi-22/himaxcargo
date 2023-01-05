@@ -64,7 +64,7 @@
 	padding-top: 370px;
 }
 .breadcrumb-bg {
-	min-height: 640px;
+	min-height: 330px;
 }
 .main-menu ul li .submenu li .submenu {
 	right: 100%;
@@ -1493,5 +1493,20 @@ label {
 	}
 	.btn-mr {
 		margin-top: 28px;
+	}
+	.margin-res{
+		margin-top: -62px;
+	}
+	.form-res{
+		margin-top: -51px;
+	}
+	.call-margin{
+		margin-left: -13px;
+	}
+	.call-icon{
+		margin-left: -8px;
+	}
+	.font-head{
+		font-size: 30px;
 	}
 }

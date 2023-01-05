@@ -7,26 +7,41 @@
 <main>
 
     <!-- breadcrumb-area -->
-    <div class="breadcrumb-area breadcrumb-bg s-breadcrumb-bg">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="breadcrumb-content">
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="dots"></li>
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item active" aria-current="page">Services</li>
-                                <li class="dots2"></li>
-                            </ol>
-                        </nav>
-                        <h2>Services</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="breadcrumb-area breadcrumb-bg">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <div class="breadcrumb-content">
+                      <nav aria-label="breadcrumb">
+                          <ol class="breadcrumb">
+                              <li class="dots"></li>
+                              <li class="breadcrumb-item"><a href="#">Home</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Services</li>
+                              <li class="dots2"></li>
+                          </ol>
+                      </nav>
+                      <h2 class="font-head">Services</h2>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
     <!-- breadcrumb-area-end -->
+
+    <!-- content -->
+    <section class="pt-30 pb-30 pl-30 pr-30">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-justify">
+          <p>Supply chain management is the process of coordinating the flow of goods, services, and information from the supplier to the customer. It involves planning, organizing, and controlling the movement and storage of goods, services, and related information from the point of origin to the point of consumption.
+
+            Cargo management is a subfield of supply chain management that specifically deals with the transportation and storage of goods. This includes the planning and execution of the movement of goods by various modes of transportation (e.g., truck, rail, ship, or plane), as well as the management of warehouses and other storage facilities.
+            Effective cargo management requires careful planning and coordination to ensure that goods are transported efficiently and arrive at their destination on time and in good condition. It also involves managing the documentation and paperwork associated with the movement of goods, including customs clearance and other regulatory requirements.
+
+            There are various tools and techniques that can be used to improve cargo management, such as transportation management systems (TMS), supply chain visibility platforms, and advanced analytics. These tools can help companies track the movement of goods, optimize routes and modes of transportation, and identify bottlenecks or inefficiencies in the supply chain.</p>
+        </div>
+      </div>
+    </section>
+    <!-- end content -->
 
     <!-- services-details -->
     <section class="services section-bg" id="services">
@@ -34,8 +49,8 @@
           <div class="row">
             <div class="col-md-6 col-lg-4">
               <div class="box">
-                <div class="icon" style="background: #000;">
-                  <i class="fa fa-briefcase service-icon" style="color: #c59c35;"></i>
+                <div class="icon" style="background: #086184;">
+                  <img src="{% static 'web/img/icon/Air Cargo Round-01.png' %}" >
                 </div>
       
                 <h4 class="title"><a href="">Air cargo</a></h4>
@@ -46,8 +61,8 @@
       
             <div class="col-md-6 col-lg-4">
               <div class="box">
-                <div class="icon" style="background: #000;">
-                  <i class="fa fa-clipboard service-icon" style="color: #c59c35;"></i>
+                <div class="icon" style="background: #086184;">
+                  <img src="{% static 'web/img/icon/Sea Cargo Round-01.png' %}" >
                 </div>
       
                 <h4 class="title"><a href="">Sea cargo</a></h4>
@@ -58,8 +73,8 @@
       
             <div class="col-md-6 col-lg-4">
               <div class="box">
-                <div class="icon" style="background: #000;">
-                  <i class="fa fa-chart-bar service-icon" style="color: #c59c35;"></i>
+                <div class="icon" style="background: #086184;">
+                  <img src="{% static 'web/img/icon/Port to Port-01_1.png' %}" >
                 </div>
       
                 <h4 class="title"><a href="">Port to port service</a></h4>
@@ -70,8 +85,8 @@
       
             <div class="col-md-6 col-lg-4">
               <div class="box">
-                <div class="icon" style="background: #000;">
-                  <i class="fa fa-binoculars service-icon" style="color: #c59c35;"></i>
+                <div class="icon" style="background: #086184;">
+                  <img src="{% static 'web/img/icon/moving service roun-01.png' %}" >
                 </div>
       
                 <h4 class="title"><a href="">Moving service</a></h4>
@@ -82,10 +97,10 @@
       
             <div class="col-md-6 col-lg-4">
               <div class="box">
-                <div class="icon" style="background: #000;">
-                  <i class="fa fa-cog service-icon" style="color:#c59c35;"></i>
+                <div class="icon" style="background: #086184;">
+                  <img src="{% static 'web/img/icon/express roun-01.png' %}" >
                 </div>
-      
+                
                 <h4 class="title"><a href="">Express delivery</a></h4>
       
                 <p class="description">Cargo forwarding is our core competency, and we specialize in the movement of luxurious and general goods at the fastest time possible.</p>
@@ -94,7 +109,7 @@
       
             <!-- <div class="col-md-6 col-lg-4">
               <div class="box">
-                <div class="icon" style="background: #000;">
+                <div class="icon" style="background: #086184;">
                   <i class="fa fa-calendar-alt service-icon" style="color: #c59c35;"></i>
                 </div>
       

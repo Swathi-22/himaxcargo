@@ -1120,7 +1120,7 @@ label {
 
 /* 5. Breadcrumb  */
 .breadcrumb-bg {
-	background-image: url(../img/bg/breadcrumb_bg.jpg);
+	background-image: url(../img/images/22.jpg);
 	min-height: 726px;
 	background-position: center;
 	background-size: cover;
@@ -1157,7 +1157,7 @@ label {
 	display: inline-block;
 	-ms-flex-wrap: unset;
 	flex-wrap: unset;
-	padding: 13px 43px;
+	padding: 6px 31px;
 	margin-bottom: 12px;
 	list-style: none;
 	background-color: #e32222;
@@ -1196,28 +1196,7 @@ label {
 	right: 10px;
 	left: auto;
 }
-.breadcrumb::before {
-	content: "";
-	position: absolute;
-	left: -25px;
-	top: 0;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 0 0 50px 25px;
-	border-color: transparent transparent #e32222 transparent;
-}
-.breadcrumb::after {
-	content: "";
-	position: absolute;
-	right: -25px;
-	top: 0;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 50px 25px 0 0;
-	border-color: #e32222 transparent transparent transparent;
-}
+
 .breadcrumb-content h2 {
 	font-size: 70px;
 	text-transform: uppercase;
@@ -1227,21 +1206,6 @@ label {
 	position: relative;
 	display: inline-block;
 }
-.breadcrumb-content h2::before, .breadcrumb-content h2::after {
-	content: "";
-	position: absolute;
-	left: 0;
-	top: 15px;
-	height: 2px;
-	width: 100%;
-	border-radius: 50%;
-	background-color: rgb(255, 70, 18, 0.288);
-}
-.breadcrumb-content h2::after {
-	top: auto;
-	bottom: 15px;
-}
-
 .breadcrumb-content {
 	padding-top: 70px;
 }
@@ -1251,7 +1215,7 @@ label {
 .slider-bg {
 	background-image: url(../img/slider/slider_img02.jpg);
 	position: relative;
-	min-height: 749px;
+	min-height: 500px;
 	background-position: center;
 	background-size: cover;
 	z-index: 2;
@@ -5098,4 +5062,7 @@ blockquote.classic-blockquote-post::after {
 .form-input{
 	padding: 16px 0px;
     text-align: center;
+}
+.font-head{
+	font-size: 57px;
 }
