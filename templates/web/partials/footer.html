@@ -5,8 +5,8 @@
     <div class="footer-wrap pt-20 pb-20" data-background="{% static 'web/img/bg/footer_bg.jpg' %}">
         <div class="container">
             <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6">
-                    <div class="footer-widget mb-50">
+                <div class="col-xl-4 col-lg-3 col-md-4">
+                    <div class="footer-widget ">
                         <div class="footer-logo mb-35">
                             <a href="#"><img src="{% static 'web/img/logo/himax.png' %}" alt="img"></a>
                         </div>
@@ -14,24 +14,18 @@
                             <p>Top-notch global cargo service provider with real fast and safe delivery of your cargo
                             </p>
                         </div>
-                        <div class="footer-social">
-                            <ul>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
+                       
                     </div>
                 </div>
-                
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 center-align">
+
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6 d-lg-none d-sm-block">
                     <div class="footer-widget mb-50">
                         <div class="fw-title mb-30">
                             <h5>USEFUL LINKS</h5>
                         </div>
                         <div class="fw-link">
                             <ul>
+                                <li><a href="{% url 'web:index' %}"><i class="fas fa-caret-right"></i> Home</a></li>
                                 <li><a href="{% url 'web:about' %}"><i class="fas fa-caret-right"></i> About us</a></li>
                                 <li><a href="{% url 'web:services' %}"><i class="fas fa-caret-right"></i> Services </a></li>
                                 <li><a href="{% url 'web:gallery' %}"><i class="fas fa-caret-right"></i> Gallery </a></li>
@@ -41,41 +35,89 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6">
+                <div class="col-xl-2 col-lg-3 col-md-6 col-sm-6 col-6 d-sm-none d-lg-block">
+                    <div class="footer-widget mb-50">
+                        <div class="fw-title mb-30">
+                            <h5>USEFUL LINKS</h5>
+                        </div>
+                        <div class="fw-link">
+                            <ul>
+                                <li><a href="{% url 'web:index' %}"><i class="fas fa-caret-right"></i> Home</a></li>
+                                <li><a href="{% url 'web:about' %}"><i class="fas fa-caret-right"></i> About us</a></li>
+                                <li><a href="{% url 'web:services' %}"><i class="fas fa-caret-right"></i> Services </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 center-align d-sm-none d-lg-block">
+                    <div class="footer-widget mb-50">
+                        <div class="fw-title mb-30">
+                            <h5>USEFUL LINKS</h5>
+                        </div>
+                        <div class="fw-link">
+                            <ul>
+                                <li><a href="{% url 'web:gallery' %}"><i class="fas fa-caret-right"></i> Gallery </a></li>
+                                <li><a href="{% url 'web:updates' %}"><i class="fas fa-caret-right"></i> Updates </a></li>
+                                <li><a href="{% url 'web:contact' %}"><i class="fas fa-caret-right"></i> Contact </a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-6">
                     <div class="footer-widget mb-50">
                         <div class="fw-title mb-30">
                             <h5>Contact</h5>
                         </div>
                         <div class="f-support-content">
-                            <div class="row">
-                                <div class="col-lg-1 col-md-1 col-sm-1 col-1 my-2 text-center">
-                                    <i class="fa-solid fa-phone call-icon"></i>
+
+                            <div class="row ">
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-center my-1">
+                                    <i class="fa-solid fa-phone icon-margin "></i>
                                 </div>
-                                <div class="col-lg-11 col-md-11 col-sm-11 col-11 my-2 call-margin">
+                                <div class="col-lg-10 col-md-10 col-sm-10 col-10 contact-mar my-1 small-font">
                                     <a href="" style="color: #969696;">
                                         +91 0000000000
                                     </a>
                                 </div>
-                                <div class="col-lg-1 col-md-1 col-sm-1 col-1 my-2 text-center">
-                                    <i class="fa-solid fa-envelope call-icon"></i>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-center my-1">
+                                    <i class="fa-solid fa-envelope icon-margin"></i>
                                 </div>
-                                <div class="col-lg-11 col-md-11 col-sm-11 col-11 my-2 call-margin">
+                                <div class="col-lg-10 col-md-10 col-sm-10 col-10 contact-mar my-1 small-font">
                                     <a href="" style="color: #969696;">
                                         info@demo.com
                                     </a>
                                 </div>
-                                <div class="col-lg-1 col-md-1 col-sm-1 col-1 text-center">
-                                    <i class="fa-solid fa-location-dot call-icon"></i>
+                                <div class="col-lg-2 col-md-2 col-sm-2 col-2 text-center my-1">
+                                    <i class="fa-solid fa-location-dot icon-margin"></i>
                                 </div>
-                                <div class="col-lg-11 col-md-11 col-sm-11 col-11 call-margin">
-                                    <p>
-                                        demo <br>
-                                        demo <br>
-                                        demo
-                                    </p>
+                                <div class="col-lg-10 col-md-10 col-sm-10 col-10 contact-mar my-1 small-font">
+                                    <span style="color: #969696;">
+                                        Empire plaza ,
+                                        Room 70 ,
+                                        Naif
+                                    </span>
                                 </div>
                             </div>
+
                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <hr class="hr-line">
+            </div>
+            <div class="row ">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12 text-center">
+                    <div class="footer-social mb-2">
+                        <ul>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
